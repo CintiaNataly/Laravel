@@ -43,7 +43,6 @@
 
         <main class="container p-4">
             
-            
             <?= $slot; ?>
 
         </main>
