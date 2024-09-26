@@ -16,34 +16,38 @@
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div id="app">
         <nav class="navbar navbar-expand-lg navmodificado">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="<?= url('inicio') ?>">LOGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?= url('inicio') ?>">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= url('quienes-somos') ?>">Quienes somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= url('novedades') ?>">Novedades</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= url('contactanos') ?>">Contactanos</a>
-                        </li>
-                    </ul>
+            <div class="container-fluid separador">
+                <div class="left">
+                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="img/aero-asist-02.png" alt="logo de AeroAsist" class="logo-nav"></a>
+                </div>
+                <div class="right">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="<?= url('inicio') ?>">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= url('quienes-somos') ?>">Quienes somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= url('novedades') ?>">Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= url('contactanos') ?>">Contactanos</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
 
 
         <main class="container p-4">
-            
-            
+
+
             <?= $slot; ?>
 
         </main>
