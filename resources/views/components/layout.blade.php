@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="shortcut icon" href="img/aero-asist-icon.png"/>
 
 </head>
 
