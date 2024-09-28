@@ -11,8 +11,8 @@ class NewsController extends Controller
 
         $novedades = Novedad::all();
 
-        dd($novedades);
+        // dd($novedades);
 
-        return view('novedades.index');
+        return view('novedades');
     }
 }
