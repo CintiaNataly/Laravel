@@ -8,11 +8,7 @@
                 <div class="col-7">
                     <img src="img/aero-asist-01.png" alt="logo de AeroAsist" class="logo">
 
-                    <p class="texto">¡Descubre la forma más fácil de moverte en el aeropuerto con nuestra nueva app! Con solo ingresar
-                        tu número de vuelo, podrás buscar rápidamente lugares dentro del aeropuerto, desde restaurantes
-                        hasta tiendas. Además, si necesitas asistencia, ¡puedes solicitarla al instante! No te pierdas
-                        de nada en tu próximo viaje. Descárgala ahora en Android y simplifica tu experiencia de viaje.
-                        ¡Tu aventura comienza aquí! ✈️📱</p>
+                    <p class="texto">¡Descubrí la forma más fácil de moverte en el aeropuerto con nuestra nueva app! Con solo ingresar tu número de vuelo, podrás buscar rápidamente lugares dentro del aeropuerto, desde restaurantes hasta tiendas. Además, si necesitáas asistencia, ¡Podés solicitarla al instante! No te pierdas de nada en tu próximo viaje. Descárgala ahora en Android y simplifica tu experiencia de viaje. ¡Tu aventura comienza aquí! ✈️📱</p>
 
                     <div class="row">
                         <div class="col-6">

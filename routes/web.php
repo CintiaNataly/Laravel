@@ -2,18 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/novedades', function () {
-    return view('novedades');
-});
+Route::get('/inicio', [\App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/inicio', function () {
-    return view('home');
-});
+Route::get('/quienes-somos', [\App\Http\Controllers\AboutController::class, 'index']);
 
-Route::get('/quienes-somos', function () {
-    return view('quienes_somos');
-});
+Route::get('/novedades', [\App\Http\Controllers\NewsController::class, 'index']);
 
-Route::get('/contactanos', function () {
-    return view('contactanos');
-});
+Route::get('/contactanos', [\App\Http\Controllers\ContactUsController::class, 'index']);
