@@ -5,4 +5,6 @@
     <h1 class="mb-3">Contactanos!</h1>
     <div>CONTACTANOS.BLADE</div>
 
+    <div>soy un contacto</div>
+
 </x-layout>
