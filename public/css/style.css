@@ -38,6 +38,7 @@ img {
 
 .logo {
     margin-top: 3rem;
+    width: 75%;
 }
 
 .logo-nav {
@@ -45,7 +46,7 @@ img {
 }
 
 .texto {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 3rem 0;
 }
 
