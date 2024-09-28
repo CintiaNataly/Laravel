@@ -1,4 +1,4 @@
-<x-layaut>
+<x-layout>
 
     <x-slot:title>Novedades</x-slot:title>
 
@@ -20,4 +20,4 @@
         </div>
     </div>
 
-</x-layaut>
+</x-layout>

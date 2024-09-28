@@ -1,4 +1,4 @@
-<x-layaut>
+<x-layout>
 
     <x-slot:title>Quienes Somos</x-slot:title>
 
@@ -12,4 +12,4 @@
 
     <p> Fundada en 2024, nuestra empresa se destaca por su compromiso con la accesibilidad, la calidad y la satisfacción del cliente. Nos esforzamos por proporcionar herramientas prácticas que mejoren la autonomía y la tranquilidad de nuestros usuarios durante sus viajes, promoviendo así una mayor inclusión y bienestar en la comunidad que desean explorar el mundo con confianza y comodidad. ✈️📱</p>
     
-</x-layaut>
+</x-layout>

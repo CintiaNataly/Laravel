@@ -1,4 +1,4 @@
-<x-layaut>
+<x-layout>
 
     <x-slot:title>🛫</x-slot:title>
 
@@ -26,4 +26,4 @@
         </div>
 
 
-</x-layaut>
+</x-layout>
