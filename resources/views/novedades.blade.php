@@ -27,7 +27,7 @@
                             <footer class="blockquote-footer">
                                 <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }}</cite>
                             </footer>
-                            <p>{{ $novedad->informacion }}</p>
+                            <p>{{ $novedad->info_abreviada }}</p>
                             <a href="{{ url('novedades/' . $novedad->novedades_id) }}" class="btn boton">Leer más</a>
                         </blockquote>
                     </div>
