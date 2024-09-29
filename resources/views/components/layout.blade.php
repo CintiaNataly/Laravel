@@ -7,10 +7,11 @@
 
     <title>Airport Assistanc - <?= $title; ?></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    <link rel="shortcut icon" href="img/aero-asist-icon.png"/>
+    <link rel="shortcut icon" href="{{ asset('img/aero-asist-icon.png') }}" />
+
 
 </head>
 
@@ -19,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navmodificado separador">
             <div class="container-fluid">
                 <div class="left">
-                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="img/aero-asist-02.png" alt="logo de AeroAsist" class="logo-nav"></a>
+                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="{{ asset('img/aero-asist-02.png') }}" alt="logo de AeroAsist" class="logo-nav"></a>
                 </div>
                 <div class="right">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +47,7 @@
         </nav>
 
 
-        <main class="container p-4">
+        <main>
 
             <?= $slot; ?>
 

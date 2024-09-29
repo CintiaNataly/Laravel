@@ -13,6 +13,19 @@ class NewsController extends Controller
 
         // dd($novedades);
 
-        return view('novedades');
+        return view('novedades', [
+            'novedades' => $novedades,
+        ]);
+    }
+
+
+    public function show(int $id){
+        $novedad = Novedad::find($id);
+
+        // dd($novedad);
+
+        return view('show', [
+            'novedad' => $novedad,
+        ]);
     }
 }

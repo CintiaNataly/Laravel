@@ -8,4 +8,6 @@ Route::get('/quienes-somos', [\App\Http\Controllers\AboutController::class, 'ind
 
 Route::get('/novedades', [\App\Http\Controllers\NewsController::class, 'index']);
 
+Route::get('/novedades/{id}', [\App\Http\Controllers\NewsController::class, 'show']);
+
 Route::get('/contactanos', [\App\Http\Controllers\ContactUsController::class, 'index']);

@@ -1,23 +1,43 @@
+<?php
+
+/** @var \App\Models\Novedad[]|\Illuminate\Database\Eloquent\Collection $novedades */
+?>
+
 <x-layout>
 
     <x-slot:title>Novedades</x-slot:title>
-
-    <h1 class="mb-3">Novedades</h1>
-    <h2 class="mb-4 mt-4">NOVEDADES!</h2>
-    
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Titulo</h3>
-                        <p>Fecha de publicacion: </p>
-                        <a href=#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
+    <div id="carouselExample" class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner-novedades.png" alt="Banner AeroAsist" class="d-block w-100">
             </div>
         </div>
     </div>
+    <h1 class="mb-3">Novedades</h1>
+
+
+    <div class="container mb-4">
+        <div class="row">
+            @foreach ($novedades as $novedad)
+            <div class="col-md-6">
+                <div class="card mt-5 cardModificada">
+                    <div class="card-header tituloCard">{{ $novedad->titulo }}</div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <footer class="blockquote-footer">
+                                <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }}</cite>
+                            </footer>
+                            <p>{{ $novedad->informacion }}</p>
+                            <a href="{{ url('novedades/' . $novedad->novedades_id) }}" class="btn boton">Leer más</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
+
+
 
 </x-layout>

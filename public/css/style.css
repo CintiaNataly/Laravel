@@ -1,10 +1,11 @@
 html, body, #app {
     height: 100%;
+    margin: 0;
 }
 
 #app {
     display: grid;
-    grid-template-rows: 56px 1fr 100px;
+    grid-template-rows: auto 1fr auto; /* Ajusta a auto para el footer */
 }
 
 .navmodificado{
@@ -32,6 +33,10 @@ h1 {
     display: none;
 }
 
+.iconosHome{
+    margin: 4rem 0;
+}
+
 img {
     width: 100%;
 }
@@ -46,19 +51,54 @@ img {
 }
 
 .texto {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 3rem 0;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
+    height: 70px;
     background-color: #113C73;
     color: whitesmoke;
 }
 
 .footer p {
-    margin: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* -------------------------------NOVEDADES */
+.cardModificada{
+    border: none;
+}
+
+.tituloCard{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: #113C73;
+}
+
+.boton{
+    background-color: #FEBB02;
+    color: #113C73;
+    padding: 0.5rem 4rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+
+/* -------------------------------QUIENES SOMOS */
+
+.carousel {
+    position: relative;
+}
+
+.superpuesto {
+    position: absolute; 
+    top: 18rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 20px;
 }
