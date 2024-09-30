@@ -35,6 +35,9 @@
                                 <a class="nav-link" href="<?= url('quienes-somos') ?>">Quienes somos</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="<?= url('servicios') ?>">Servicios</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="<?= url('novedades') ?>">Novedades</a>
                             </li>
                             <li class="nav-item">
