@@ -51,7 +51,7 @@ class NovedadSeeder extends Seeder
 
                 Además, la experiencia de viajar se vuelve más placentera, ya que podés aprovechar el tiempo libre para disfrutar de las tiendas y restaurantes del aeropuerto. Gracias a AeroAsist, te asegurás de que cada parte de tu viaje, desde el check-in hasta el embarque, sea lo más fluida posible. Así, podés relajarte y disfrutar de la espera, sabiendo que tenés todo bajo control.',
                 'created_at' => now(),
-                'update_dat' => now(),
+                'updated_at' => now(),
             ],
         ]);
     }

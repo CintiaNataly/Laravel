@@ -53,7 +53,11 @@
         </nav>
 
 
-        <main>
+        <main class="container">
+            @if(session()->has('feedback.message'))
+            <p class="alert alert-success mt-3">{{ session()->get('feedback.message') }}</p>
+            @endif
+
 
             <?= $slot; ?>
 

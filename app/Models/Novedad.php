@@ -12,5 +12,5 @@ class Novedad extends Model
     protected $table = "novedades";
     protected $primaryKey = "novedades_id";
 
-    // protected $fillable = ['title', 'fecha_publicacion', 'informacion'];
+    protected $fillable = ['titulo', 'fecha_publicacion', 'categoria', 'info_abreviada', 'descripcion'];
 }
