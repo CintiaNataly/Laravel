@@ -40,6 +40,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= url('contactanos') ?>">Contactanos</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Ingresar</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

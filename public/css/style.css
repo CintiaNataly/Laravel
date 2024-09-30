@@ -86,19 +86,18 @@ img {
     width: 100%;
 }
 
+/* -------------------------------ADMIN NOVEDADES */
 
-
-/* -------------------------------QUIENES SOMOS */
-
-.carousel {
-    position: relative;
+.center {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
 }
 
-.superpuesto {
-    position: absolute; 
-    top: 18rem;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 20px;
+table {
+    font-size: 0.9rem;
+}
+
+table > thead {
+    border-bottom: solid 1px black;
 }

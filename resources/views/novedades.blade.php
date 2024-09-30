@@ -26,6 +26,7 @@
                         <blockquote class="blockquote mb-0">
                             <footer class="blockquote-footer">
                                 <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }}</cite>
+                                <p>Categoria: {{ $novedad->categoria }}</p>
                             </footer>
                             <p>{{ $novedad->info_abreviada }}</p>
                             <a href="{{ url('novedades/' . $novedad->novedades_id) }}" class="btn boton">Leer más</a>

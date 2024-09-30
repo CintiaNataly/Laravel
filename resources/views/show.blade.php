@@ -1,3 +1,8 @@
+<?php
+
+/** @var \App\Models\Novedad[] $novedad */
+?>
+
 <x-layout>
     <x-slot:title>{{ $novedad->titulo }}</x-slot:title>
 
@@ -19,7 +24,7 @@
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <footer class="blockquote-footer">
-                            <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }}</cite>
+                            <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }} - Categoria: {{ $novedad->categoria }}</cite>
                         </footer>
                         <p>{{ $novedad->info_abreviada }}</p>
 

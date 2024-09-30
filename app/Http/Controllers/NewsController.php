@@ -20,7 +20,7 @@ class NewsController extends Controller
 
 
     public function show(int $id){
-        $novedad = Novedad::find($id);
+        $novedad = Novedad::findOrFail($id);
 
         // dd($novedad);
 
@@ -28,4 +28,21 @@ class NewsController extends Controller
             'novedad' => $novedad,
         ]);
     }
+
+
+    public function admin_novedades() {
+
+        $novedades = Novedad::all();
+
+
+        return view('admin_novedades', [
+            'novedades' => $novedades,
+        ]);
+    }
+
+
+    public function create() {
+        return view('create');
+    } 
+
 }
