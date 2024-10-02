@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function index() {
-
+    public function index()
+    {
         $novedades = Novedad::all();
-
-        // dd($novedades);
 
         return view('novedades', [
             'novedades' => $novedades,
@@ -19,10 +17,9 @@ class NewsController extends Controller
     }
 
 
-    public function show(int $id){
+    public function show(int $id)
+    {
         $novedad = Novedad::findOrFail($id);
-
-        // dd($novedad);
 
         return view('show', [
             'novedad' => $novedad,
@@ -30,10 +27,9 @@ class NewsController extends Controller
     }
 
 
-    public function admin_novedades() {
-
+    public function admin_novedades()
+    {
         $novedades = Novedad::all();
-
 
         return view('admin_novedades', [
             'novedades' => $novedades,
@@ -41,8 +37,31 @@ class NewsController extends Controller
     }
 
 
-    public function create() {
+    public function create()
+    {
         return view('create');
-    } 
+    }
 
+
+    public function store(Request $request)
+    {
+        $data = $request->except(['_token']);
+
+        // Validaciones
+
+        $request->validate([
+            'titulo' => 'required|min:5',
+            'fecha_publicacion' => 'required|',
+            'categoria' => 'required',
+            'info_abreviada'  => 'required',
+            'descripcion'
+
+        ]);
+
+
+
+        Novedad::create($data);
+
+        return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . $data['titulo'] . '" se publico con éxito!');
+    }
 }
