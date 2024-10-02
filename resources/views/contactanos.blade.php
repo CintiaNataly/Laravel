@@ -3,9 +3,7 @@
     <x-slot:title>Contactanos</x-slot:title>
 
         <div class="container text-center mt-5">
-            <a class="navbar-brand" href="<?= url('inicio') ?>">
                 <img src="img/aero-asist-contactanos.png" alt="Contactanos AeroAsist" class="img-fluid w-75">
-            </a>
         </div>
 
             <div class="container mt-5">
