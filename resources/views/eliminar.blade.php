@@ -7,13 +7,14 @@
     <x-slot:title>Confimación para eliminar: {{ $novedad->titulo }}</x-slot:title>
     <h1 class="mb-3">Confirmación para eliminar</h1>
 
+    <div class="container">
+        <p class="mb-3 h2 mt-4">Confimación para eliminar: <b>{{ $novedad->titulo }}</b>.</p>
+        <p>¿Desea continuar?</p>
 
-    <p class="mb-3 h2 mt-4">Confimación para eliminar: <b>{{ $novedad->titulo }}</b>.</p>
-    <p>¿Desea continuar?</p>
-
-    <form action="{{ url('/admin/novedades/' . $novedad->novedades_id . '/eliminar') }}" method="post">
-        <button type="submit" class="btn btn-danger">Si, eliminar <b>{{ $novedad->titulo }}</b></button>
-    </form>
+        <form action="{{ url('/admin/novedades/' . $novedad->novedades_id . '/eliminar') }}" method="post">
+            <button type="submit" class="btn btn-danger">Si, eliminar <b>{{ $novedad->titulo }}</b></button>
+        </form>
+    </div>
 
 
     <div class="container mb-4 mt-5">
