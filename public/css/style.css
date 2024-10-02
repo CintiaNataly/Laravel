@@ -105,7 +105,7 @@ table > thead {
 
 /*CONTACTO*/
 
-.logo-nav {
+.contacto-logo {
     width: 100%;
     max-width: 250px; /* Ajusta el tamaño máximo del logo */
     height: auto;
@@ -113,7 +113,7 @@ table > thead {
 }
 
 @media (max-width: 768px) {
-    .logo-nav {
+    .contacto-logo {
         max-width: 150px; /* Tamaño más pequeño en pantallas móviles */
     }
 }

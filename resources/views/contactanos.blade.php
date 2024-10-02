@@ -4,7 +4,7 @@
 
     <div class="container text-center mt-5">
         <a class="navbar-brand" href="<?= url('inicio') ?>">
-            <img src="img/aero-asist-01.png" alt="logo de AeroAsist" class="logo-nav img-fluid" style="max-width: 400px;">
+            <img src="img/aero-asist-01.png" alt="logo de AeroAsist" class="contacto-logo img-fluid" style="max-width: 400px;">
         </a>
     </div>
 
