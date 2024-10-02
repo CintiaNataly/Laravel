@@ -35,6 +35,11 @@
                     <td>{{ $novedad->fecha_publicacion }}</td>
                     <td>{{ $novedad->info_abreviada }}</td>
                     <td>{{ $novedad->descripcion }}</td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <a href="{{ url('/admin/novedades/' . $novedad->novedades_id . '/eliminar') }}" class="btn btn-danger">Eliminar</a>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
