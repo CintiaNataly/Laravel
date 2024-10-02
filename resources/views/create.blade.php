@@ -60,7 +60,11 @@
 
             <div class="mb-3">
                 <label for="descripcion" class="form-label">Descripción</label>
-                <textarea id="descripcion" name="descripcion" class="form-control">{{ old('descripcion') }}</textarea>
+                <textarea id="descripcion" name="descripcion" class="form-control" value="{{ old('descripcion') }}" @error('descripcion') aria-errormessage="error-info" @enderror>{{ old('descripcion') }}</textarea>
+
+                @error('descripcion')
+                <div class="text-danger bi bi-x" id="error-info">{{ $message }}</div>
+                @enderror
             </div>
 
             <button type="submit" class="btn boton mb-3 mt-3">Agregar</button>

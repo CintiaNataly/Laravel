@@ -56,13 +56,14 @@ class NewsController extends Controller
             'fecha_publicacion' => 'required|',
             'categoria' => 'required',
             'info_abreviada'  => 'required',
-            'descripcion'
+            'descripcion'  => 'required',
         ],[
             'titulo.required' => 'El titulo es obligatorio',
             'titulo.min' => 'El titulo debe tener al menos 3 caracteres',
             'fecha_publicacion.required' => 'La fecha de publicación es obligatoria',
             'categoria.required' => 'La categoria es obligatoria',
-            'info_abreviada.required' => 'La descripción corta es obligatoria'
+            'info_abreviada.required' => 'La descripción corta es obligatoria',
+            'descripcion.required' => 'La descripción es obligatoria'
         ]);
 
 
