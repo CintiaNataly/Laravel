@@ -21,4 +21,7 @@ Route::post('/admin/novedades/publicar', [\App\Http\Controllers\NewsController::
 Route::get('/admin/novedades/{id}/eliminar', [\App\Http\Controllers\NewsController::class, 'eliminar']);
 Route::post('/admin/novedades/{id}', [\App\Http\Controllers\NewsController::class, 'destruir']);
 
-Route::get('/contactanos', [\App\Http\Controllers\ContactUsController::class, 'index']);
+use App\Http\Controllers\ContactUsController;
+
+Route::get('/contactanos', [ContactUsController::class, 'index'])->name('contactanos'); 
+Route::post('/contactanos', [ContactUsController::class, 'contacto']); 
