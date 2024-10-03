@@ -11,7 +11,7 @@
         <h1 class="mb-3">Admin Novedades</h1>
         <h2 class="center">Admin Novedades</h2>
 
-        <a href="{{ url('admin/novedades/publicar') }}" class="btn boton mb-3 mt-3">Agregar una Novedad</a>
+        <a href="{{ route('novedades.crear') }}" class="btn boton mb-3 mt-3">Agregar una Novedad</a>
 
 
         <table class="table table-striped">
@@ -37,7 +37,8 @@
                     <td>{{ $novedad->descripcion }}</td>
                     <td>
                         <div class="d-flex gap-2">
-                            <a href="{{ url('/admin/novedades/' . $novedad->novedades_id . '/eliminar') }}" class="btn btn-danger">Eliminar</a>
+                            <a href="{{ route('novedades.editar', ['id' => $novedad->novedades_id]) }}" class="btn btn-secondary">Editar</a>
+                            <a href="{{ route('novedades.eliminar', ['id' => $novedad->novedades_id]) }}" class="btn btn-danger">Eliminar</a>
                         </div>
                     </td>
                 </tr>

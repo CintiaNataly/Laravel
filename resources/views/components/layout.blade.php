@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navmodificado separador">
             <div class="container-fluid">
                 <div class="left">
-                    <a class="navbar-brand" href="<?= url('inicio') ?>"><img src="{{ asset('img/aero-asist-02.png') }}" alt="logo de AeroAsist" class="logo-nav"></a>
+                    <a class="navbar-brand" href="<?= route('inicio') ?>"><img src="{{ asset('img/aero-asist-02.png') }}" alt="logo de AeroAsist" class="logo-nav"></a>
                 </div>
                 <div class="right">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,19 +30,19 @@
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="<?= url('inicio') ?>">Home</a>
+                                <a class="nav-link active" aria-current="page" href="<?= route('inicio') ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('quienes-somos') ?>">Quienes somos</a>
+                                <a class="nav-link" href="<?= route('quienes-somos') ?>">Quienes somos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('servicios') ?>">Servicios</a>
+                                <a class="nav-link" href="<?= route('servicios') ?>">Servicios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('novedades') ?>">Novedades</a>
+                                <a class="nav-link" href="<?= route('novedades') ?>">Novedades</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('contactanos') ?>">Contactanos</a>
+                                <a class="nav-link" href="<?= route('contactanos') ?>">Contactanos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Ingresar</a>

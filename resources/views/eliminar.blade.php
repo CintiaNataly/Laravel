@@ -11,7 +11,8 @@
         <p class="mb-3 h2 mt-4">Confimación para eliminar: <b>{{ $novedad->titulo }}</b>.</p>
         <p>¿Desea continuar?</p>
 
-        <form action="{{ url('/admin/novedades/' . $novedad->novedades_id . '/eliminar') }}" method="post">
+        <form action="{{ route('novedades.confirmar-eliminar', ['id' => $novedad->novedades_id]) }}" method="post">
+            @csrf
             <button type="submit" class="btn btn-danger">Si, eliminar <b>{{ $novedad->titulo }}</b></button>
         </form>
     </div>

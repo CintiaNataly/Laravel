@@ -7,6 +7,24 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+
+    private array $validaciones = [
+        'titulo' => 'required|min:3',
+        'fecha_publicacion' => 'required|',
+        'categoria' => 'required',
+        'info_abreviada'  => 'required',
+        'descripcion'  => 'required',
+    ];
+
+    private array $mensajesValidacion = [
+        'titulo.required' => 'El titulo es obligatorio',
+        'titulo.min' => 'El titulo debe tener al menos 3 caracteres',
+        'fecha_publicacion.required' => 'La fecha de publicación es obligatoria',
+        'categoria.required' => 'La categoria es obligatoria',
+        'info_abreviada.required' => 'La descripción corta es obligatoria',
+        'descripcion.required' => 'La descripción es obligatoria'
+    ];
+
     public function index()
     {
         $novedades = Novedad::all();
@@ -39,32 +57,19 @@ class NewsController extends Controller
     }
 
 
-    public function create()
+    public function crear()
     {
-        return view('create');
+        return view('crear');
     }
 
 
-    public function store(Request $request)
+    public function almacenar(Request $request)
     {
         $data = $request->except(['_token']);
 
         // Validaciones
 
-        $request->validate([
-            'titulo' => 'required|min:3',
-            'fecha_publicacion' => 'required|',
-            'categoria' => 'required',
-            'info_abreviada'  => 'required',
-            'descripcion'  => 'required',
-        ],[
-            'titulo.required' => 'El titulo es obligatorio',
-            'titulo.min' => 'El titulo debe tener al menos 3 caracteres',
-            'fecha_publicacion.required' => 'La fecha de publicación es obligatoria',
-            'categoria.required' => 'La categoria es obligatoria',
-            'info_abreviada.required' => 'La descripción corta es obligatoria',
-            'descripcion.required' => 'La descripción es obligatoria'
-        ]);
+        $request->validate( $this->validaciones, $this->mensajesValidacion );
 
 
 
@@ -73,10 +78,38 @@ class NewsController extends Controller
         return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . $data['titulo'] . '" se publico con éxito!');
     }
 
+    public function editar(int $id){
+        return view('editar', [
+            'novedad' => Novedad::findOrFail($id)
+        ]);
+    }
+
+    public function actualizar(Request $request, int $id){ 
+        $request->validate( $this->validaciones, $this->mensajesValidacion );
+
+        $novedad = Novedad::findOrFail($id);
+
+        $novedad->update($request->except(['_token']));
+
+        return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . e($novedad->titulo) . '" se editó con éxito!');
+    }
+
 
     public function eliminar(int $id){
         return view('eliminar', [
-            'novedad' => Novedad::findOrFail($id),
+            'novedad' => Novedad::findOrFail($id)
         ]);
     }
+
+    
+    public function destruir(int $id){
+        
+            $novedad = Novedad::findOrFail($id);
+
+            $novedad->delete();
+
+            return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . e($novedad->titulo) . '" se eliminó con éxito!');
+        
+    }
+
 }

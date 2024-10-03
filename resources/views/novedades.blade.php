@@ -29,7 +29,7 @@
                                 <p>Categoria: {{ $novedad->categoria }}</p>
                             </footer>
                             <p>{{ $novedad->info_abreviada }}</p>
-                            <a href="{{ url('novedades/' . $novedad->novedades_id) }}" class="btn boton">Leer más</a>
+                            <a href="{{ route('novedades.show', ['id' => $novedad->novedades_id]) }}" class="btn boton">Leer más</a>
                         </blockquote>
                     </div>
                 </div>
