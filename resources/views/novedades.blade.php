@@ -6,12 +6,8 @@
 <x-layout>
 
     <x-slot:title>Novedades</x-slot:title>
-    <div id="carouselExample" class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/banner-novedades.png" alt="Banner AeroAsist" class="d-block w-100">
-            </div>
-        </div>
+    <div class="w-100">
+        <img src="img/banner-novedades.png" alt="Banner AeroAsist" class="d-block w-100">
     </div>
     <h1 class="nomostrar mb-3">Novedades</h1>
 

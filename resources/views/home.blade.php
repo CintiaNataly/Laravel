@@ -2,12 +2,8 @@
     <x-slot:title>🛫</x-slot:title>
     <h1 class="nomostrar mb-3">Airport Assistance</h1>
 
-    <div id="carouselExample" class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/banner-home.png" alt="Banner AeroAsist" class="d-block w-100">
-            </div>
-        </div>
+    <div class="w-100">
+        <img src="img/banner-home.png" alt="Banner AeroAsist" class="d-block w-100">
     </div>
 
     <div class="container">
