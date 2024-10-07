@@ -6,19 +6,17 @@
 <x-layout>
     <x-slot:title>{{ $novedad->titulo }}</x-slot:title>
 
-    <div id="carouselExample" class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/banner-novedades.png') }}" alt="Banner AeroAsist" class="d-block w-100">
-            </div>
-        </div>
+    <h1 class="nomostrar mb-3">Novedades</h1>
+
+    <div class="servicios-section">
+    <h2 class="titulo-servicios mb-3 fs-1 fst-italic"><span>{{ $novedad->titulo }}</span></h2>    
+    <div class="linea-amarilla"></div>
     </div>
 
-    <h1 class="nomostrar mb-3">Novedades</h1>
+   
 
 
     <div class="container mb-4 mt-5">
-        <h2 class="mb-3">{{ $novedad->titulo }}</h2>
         <div class="row">
             <div class="card cardModificada">
                 <div class="card-body">
