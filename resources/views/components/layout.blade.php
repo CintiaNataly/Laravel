@@ -46,7 +46,7 @@
                             </li>
                             @auth
                             <li class="nav-item">
-                                <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Admin</a>
+                                <a class="btn btn-primary" href="<?= url('admin/novedades') ?>">Admin</a>
                             </li>
                             @endauth
 
@@ -55,12 +55,12 @@
                                 <li class="nav-item">
                                     <form action="{{ route('auth.logout') }}" method="post">
                                         @csrf
-                                        <button type="submit" class="nav-link">{{ auth()->user()->email }} (Cerrar Sesión)</button>
+                                        <button type="submit" class="btn btn-danger ms-2">{{ auth()->user()->email }} (Cerrar Sesión)</button>
                                     </form>
                                 </li>
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= route('auth.showLogin');?>">Iniciar Sesión</a>
+                                    <a class= "btn btn-dark ms-2" href="<?= route('auth.showLogin');?>">Iniciar Sesión</a>
                                 </li> 
                                 @endauth
                         </ul>

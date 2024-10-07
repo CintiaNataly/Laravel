@@ -26,7 +26,7 @@ class AuthController extends Controller
         }
 
         return redirect()
-        ->route('servicios')
+        ->route('novedades.admin')
         ->with('feedback.message-sucess', 'Haz iniciado sesión con exito.');
     }
 

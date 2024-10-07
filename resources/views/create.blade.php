@@ -9,7 +9,7 @@
 <x-layout>
 
     <x-slot:title>Crear Novedad</x-slot:title>
-    <h1 class="mb-3">Crear una Novedad</h1>
+    <h1 class="nomostrar mb-3">Crear una Novedad</h1>
 
 
     <div class="container">

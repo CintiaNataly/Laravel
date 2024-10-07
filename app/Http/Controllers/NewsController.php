@@ -75,7 +75,7 @@ class NewsController extends Controller
 
         Novedad::create($data);
 
-        return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . $data['titulo'] . '" se publico con éxito!');
+        return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . $data['titulo'] . '" se publico con éxito!');
     }
 
     public function editar(int $id){
@@ -91,7 +91,7 @@ class NewsController extends Controller
 
         $novedad->update($request->except(['_token']));
 
-        return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . e($novedad->titulo) . '" se editó con éxito!');
+        return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . e($novedad->titulo) . '" se editó con éxito!');
     }
 
 
@@ -108,7 +108,7 @@ class NewsController extends Controller
 
             $novedad->delete();
 
-            return redirect(url('admin/novedades'))->with('feedback.message', 'La novedad "' . e($novedad->titulo) . '" se eliminó con éxito!');
+            return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . e($novedad->titulo) . '" se eliminó con éxito!');
         
     }
 
