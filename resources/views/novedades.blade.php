@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <h1 class="mb-3">Novedades</h1>
+    <h1 class="nomostrar mb-3">Novedades</h1>
 
 
     <div class="container mb-4">

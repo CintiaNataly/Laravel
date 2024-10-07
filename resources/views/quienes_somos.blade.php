@@ -3,7 +3,7 @@
     <x-slot:title>Quienes Somos</x-slot:title>
    
     <div class="container mt-5">
-        <h1 class="mb-3">Quienes Somos</h1>
+        <h1 class="nomostrar mb-3">Quienes Somos</h1>
 
         <div class="d-flex justify-content-center">
             <img src="img/aero-asist-01.png" alt="logo de AeroAsist" class="w-50 img-fluid">

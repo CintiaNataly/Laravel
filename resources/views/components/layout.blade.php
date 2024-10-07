@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Airport Assistanc - <?= $title; ?></title>
+    <title>AeroAsist - <?= $title; ?></title>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -44,9 +44,25 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= route('contactanos') ?>">Contactanos</a>
                             </li>
+                            @auth
                             <li class="nav-item">
-                                <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Ingresar</a>
+                                <a class="btn btn-secondary" href="<?= url('admin/novedades') ?>">Admin</a>
                             </li>
+                            @endauth
+
+
+                                @auth
+                                <li class="nav-item">
+                                    <form action="{{ route('auth.logout') }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="nav-link">{{ auth()->user()->email }} (Cerrar Sesión)</button>
+                                    </form>
+                                </li>
+                                @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= route('auth.showLogin');?>">Iniciar Sesión</a>
+                                </li> 
+                                @endauth
                         </ul>
                     </div>
                 </div>
@@ -56,9 +72,21 @@
 
         <main>
             <div class="container">
-                @if(session()->has('feedback.message'))
-                <p class="alert alert-success mt-3">{{ session()->get('feedback.message') }}</p>
+                @if(session()->has('feedback.message-sucess'))
+                <p class="alert alert-success mt-3"> <i class="bi bi-check-circle"></i> {{ session()->get('feedback.message-sucess') }}</p>
+                
                 @endif
+
+                @if(session()->has('feedback.message-error'))
+                <p class="alert alert-danger mt-3"><i class="bi bi-x-circle"></i> {{ session()->get('feedback.message-error') }}</p>
+                @endif
+
+                @if(session()->has('feedback.message-warning'))
+                <p class="alert alert-warning mt-3"><i class="bi bi-exclamation-circle"></i> {{ session()->get('feedback.message-warning') }}</p>
+                @endif
+
+               
+
             </div>
 
 

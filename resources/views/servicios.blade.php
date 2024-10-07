@@ -2,7 +2,11 @@
 
     <x-slot:title>Servicios</x-slot:title>
 
-    <h1 class="mb-3">Servicios</h1>
+    <div class="servicios-section">
+    <h1 class="titulo-servicios mb-3"><span>Servicios</span></h1>    
+    <div class="linea-amarilla"></div>
+    </div>
+    
 
     <div class="container my-4">
         <div class="row">

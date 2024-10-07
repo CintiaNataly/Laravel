@@ -8,11 +8,14 @@ html, body, #app {
     grid-template-rows: auto 1fr auto;
 }
 
+
+
 .navmodificado{
     background-color: #FEBB02;
     color: #113C73;
     height: 70px;
     font-weight: bolder;
+   
 }
 
 .separador {
@@ -29,7 +32,7 @@ html, body, #app {
     padding-right: 3rem;
 }
 
-h1 {
+.nomostrar {
     display: none;
 }
 
@@ -40,6 +43,8 @@ h1 {
 img {
     width: 100%;
 }
+
+
 
 .logo {
     margin-top: 3rem;
@@ -101,5 +106,56 @@ table {
 table > thead {
     border-bottom: solid 1px black;
 }
+
+
+/* TITULO SERVICIOS */
+
+.titulo-servicios {
+    font-size: 8rem;
+    color: #F1C40F; 
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2); 
+    font-weight: bold; 
+    text-align: center;
+    z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
+    position: relative;
+    height: 40%;
+   
+}
+
+.titulo-servicios span {
+    color: #ffffff; /* Color azul */
+    top: 0; 
+    left: 15%; 
+}
+
+.servicios-section {
+    background-image: url('../img/salas_vip/fondo-servicios.jpg'); 
+    background-size: cover; 
+    background-position: bottom; 
+    padding: 50px 0; 
+    position: relative; 
+}
+
+.servicios-section::before {
+    content: '';
+    position: absolute; /* Posiciona la capa oscura sobre la imagen */
+    top: 0; /* Alinea a la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    right: 0; /* Alinea a la derecha */
+    bottom: 0; /* Alinea a la parte inferior */
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% */
+    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+}
+
+.linea-amarilla {
+    height: 30px; 
+    background-color: #F1C40F; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1;
+}
+
 
 
