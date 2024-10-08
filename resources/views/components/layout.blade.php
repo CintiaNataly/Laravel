@@ -18,7 +18,7 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div id="app">
-        <nav class="navbar navbar-expand-lg navmodificado separador">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <div class="left">
                     <a class="navbar-brand" href="<?= route('inicio') ?>"><img src="{{ asset('img/aero-asist-02.png') }}" alt="logo de AeroAsist" class="logo-nav"></a>

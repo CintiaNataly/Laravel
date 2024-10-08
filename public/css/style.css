@@ -8,20 +8,8 @@ html, body, #app {
     grid-template-rows: auto 1fr auto;
 }
 
-
-
-.navmodificado{
+nav {
     background-color: #FEBB02;
-    color: #113C73;
-    height: 70px;
-    font-weight: bolder;
-   
-}
-
-.separador {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
 }
 
 .left {
