@@ -8,7 +8,7 @@
 
     <div class="container">
 
-        <h1 class="nomostrar mb-3">Admin Novedades</h1>
+        <h1 class="visually-hidden mb-3">Admin Novedades</h1>
         <h2 class="center">Admin Novedades</h2>
 
         <a href="{{ route('novedades.crear') }}" class="btn boton mb-3 mt-3">Agregar una Novedad</a>

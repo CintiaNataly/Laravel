@@ -4,7 +4,7 @@ use App\Http\Controllers\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/inicio', [\App\Http\Controllers\HomeController::class, 'index'])
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])
     ->name('inicio');
 
 Route::get('/quienes-somos', [\App\Http\Controllers\AboutController::class, 'index'])

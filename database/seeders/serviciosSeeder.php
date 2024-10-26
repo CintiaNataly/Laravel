@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use function Laravel\Prompts\table;
 
 
-class serviciosSeeder extends Seeder
+class ServiciosSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             NovedadSeeder::class,
             UsuarioSeeder::class,
-            serviciosSeeder::class
+            ServiciosSeeder::class
         ]);
     }
 }

@@ -5,7 +5,7 @@
 
 <x-layout>
     <x-slot:title>Confimación para eliminar: {{ $novedad->titulo }}</x-slot:title>
-    <h1 class="nomostrar mb-3">Confirmación para eliminar</h1>
+    <h1 class="visually-hidden mb-3">Confirmación para eliminar</h1>
 
     <div class="container">
         <p class="mb-3 h2 mt-4">Confimación para eliminar: <b>{{ $novedad->titulo }}</b>.</p>

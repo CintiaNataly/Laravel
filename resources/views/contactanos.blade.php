@@ -1,6 +1,7 @@
 <x-layout>
 
     <x-slot:title>Contactanos</x-slot:title>
+    <h1 class="visually-hidden mb-3">Contactanos</h1>
 
         <div class="container text-center mt-5">
                 <img src="img/aero-asist-contactanos.png" alt="Contactanos AeroAsist" class="img-fluid w-75">

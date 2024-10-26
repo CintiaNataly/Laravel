@@ -12,5 +12,5 @@ class Servicio extends Model
     protected $table = "servicios";
     protected $primaryKey = "servicios_id";
 
- 
+    protected $fillable = ['nombre', 'tarifa_acceso', 'tarifa_socios', 'descripcion', 'condiciones'];
 }

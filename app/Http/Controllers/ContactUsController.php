@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('contactanos');
     }
+
 
     public function contacto(Request $request)
     {

@@ -9,7 +9,7 @@
 <x-layout>
 
     <x-slot:title>Crear Novedad</x-slot:title>
-    <h1 class="nomostrar mb-3">Crear una Novedad</h1>
+    <h1 class="visually-hidden mb-3">Crear una Novedad</h1>
 
 
     <div class="container">
@@ -21,30 +21,21 @@
 
         <form action="{{ route('novedades.guardar') }}" method="post">
             @csrf
-            <div class="mb-3">
-                <label for="titulo" class="form-label">Título</label>
-                <input type="text" id="titulo" name="titulo" class="form-control" value="{{ old('titulo') }}" @error('titulo') aria-errormessage="error-titulo" @enderror>
-
-                @error('titulo')
-                <div class="text-danger bi bi-x" id="error-titulo">{{ $message }}</div>
-                @enderror
-            </div>
-
             <div class="mb-3 row">
+                <div class="col">
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" value="{{ old('titulo') }}" @error('titulo') aria-errormessage="error-titulo" @enderror>
+
+                    @error('titulo')
+                    <div class="text-danger bi bi-x" id="error-titulo">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col">
                     <label for="categoria" class="form-label">Categoría</label>
                     <input type="text" id="categoria" name="categoria" class="form-control" value="{{ old('categoria') }}" @error('categoria') aria-errormessage="error-categoria" @enderror>
 
                     @error('categoria')
                     <div class="text-danger bi bi-x" id="error-categoria">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="col">
-                    <label for="fecha_publicacion" class="form-label">Creación</label>
-                    <input type="date" id="fecha_publicacion" name="fecha_publicacion" class="form-control" value="{{ old('fecha_publicacion') }}" @error('fecha_publicacion') aria-errormessage="error-creacion" @enderror>
-
-                    @error('fecha_publicacion')
-                    <div class="text-danger bi bi-x" id="error-creacion">{{ $message }}</div>
                     @enderror
                 </div>
             </div>

@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-
     private array $validaciones = [
         'titulo' => 'required|min:3',
-        'fecha_publicacion' => 'required|',
         'categoria' => 'required',
         'info_abreviada'  => 'required',
         'descripcion'  => 'required',
@@ -19,11 +17,11 @@ class NewsController extends Controller
     private array $mensajesValidacion = [
         'titulo.required' => 'El titulo es obligatorio',
         'titulo.min' => 'El titulo debe tener al menos 3 caracteres',
-        'fecha_publicacion.required' => 'La fecha de publicación es obligatoria',
         'categoria.required' => 'La categoria es obligatoria',
         'info_abreviada.required' => 'La descripción corta es obligatoria',
         'descripcion.required' => 'La descripción es obligatoria'
     ];
+
 
     public function index()
     {
@@ -45,8 +43,6 @@ class NewsController extends Controller
     }
 
 
-
-
     public function admin_novedades()
     {
         $novedades = Novedad::all();
@@ -66,26 +62,29 @@ class NewsController extends Controller
     public function almacenar(Request $request)
     {
         $data = $request->except(['_token']);
-
         // Validaciones
 
-        $request->validate( $this->validaciones, $this->mensajesValidacion );
+        $request->validate($this->validaciones, $this->mensajesValidacion);
 
-
-
+        $data['fecha_publicacion'] = now();
+        
         Novedad::create($data);
 
         return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . $data['titulo'] . '" se publico con éxito!');
     }
 
-    public function editar(int $id){
+
+    public function editar(int $id)
+    {
         return view('editar', [
             'novedad' => Novedad::findOrFail($id)
         ]);
     }
 
-    public function actualizar(Request $request, int $id){ 
-        $request->validate( $this->validaciones, $this->mensajesValidacion );
+
+    public function actualizar(Request $request, int $id)
+    {
+        $request->validate($this->validaciones, $this->mensajesValidacion);
 
         $novedad = Novedad::findOrFail($id);
 
@@ -95,21 +94,21 @@ class NewsController extends Controller
     }
 
 
-    public function eliminar(int $id){
+    public function eliminar(int $id)
+    {
         return view('eliminar', [
             'novedad' => Novedad::findOrFail($id)
         ]);
     }
 
-    
-    public function destruir(int $id){
-        
-            $novedad = Novedad::findOrFail($id);
 
-            $novedad->delete();
+    public function destruir(int $id)
+    {
 
-            return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . e($novedad->titulo) . '" se eliminó con éxito!');
-        
+        $novedad = Novedad::findOrFail($id);
+
+        $novedad->delete();
+
+        return redirect(url('admin/novedades'))->with('feedback.message-sucess', 'La novedad "' . e($novedad->titulo) . '" se eliminó con éxito!');
     }
-
 }

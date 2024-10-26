@@ -6,14 +6,14 @@
 <x-layout>
     <x-slot:title>{{ $novedad->titulo }}</x-slot:title>
 
-    <h1 class="nomostrar mb-3">Novedades</h1>
+    <h1 class="visually-hidden mb-3">Novedades</h1>
 
     <div class="servicios-section">
-    <h2 class="titulo-servicios mb-3 fs-1 fst-italic"><span>{{ $novedad->titulo }}</span></h2>    
-    <div class="linea-amarilla"></div>
+        <h2 class="titulo-servicios mb-3 fs-1 fst-italic"><span>{{ $novedad->titulo }}</span></h2>
+        <div class="linea-amarilla"></div>
     </div>
 
-   
+
 
 
     <div class="container mb-4 mt-5">
@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <footer class="blockquote-footer">
-                            <cite title="Source Title">Fecha de publicación: {{ $novedad->fecha_publicacion }} - Categoria: {{ $novedad->categoria }}</cite>
+                            <cite title="Source Title">Fecha de publicación: {{ now()->format('Y-m-d') }}</cite>
                         </footer>
                         <p>{{ $novedad->info_abreviada }}</p>
 

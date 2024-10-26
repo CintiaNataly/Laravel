@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>🛫</x-slot:title>
-    <h1 class="nomostrar mb-3">Airport Assistance</h1>
+    <h1 class="visually-hidden mb-3">Airport Assistance</h1>
 
     <div class="w-100">
         <img src="img/banner-home.png" alt="Banner AeroAsist" class="d-block w-100">
