@@ -1,0 +1,160 @@
+html, body, #app {
+    height: 100%;
+    margin: 0;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav {
+    background-color: #FEBB02;
+}
+
+.left {
+    padding-left: 3rem;
+}
+
+.right {
+    padding-right: 3rem;
+}
+
+img {
+    width: 100%;
+}
+
+.frase{
+    font-weight: bolder;
+    font-style: italic;
+    color: #113C73;
+}
+
+.franja-texto{
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.logo {
+    margin-top: 3rem;
+    width: 65%;
+}
+
+.logo-nav {
+    max-width: 150px;
+}
+
+.texto {
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.backcarrusel{
+    background-color: #f0f0f0;
+}
+
+.ahover:hover{
+    color: #FEBB02;
+}
+
+.footer {
+    background-color: #113C73;
+    color: whitesmoke;
+}
+
+.footer p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* -------------------------------NOVEDADES */
+.cardModificada{
+    border: none;
+}
+
+.tituloCard{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: #113C73;
+}
+
+.boton, .botoncarrousel{
+    background-color: #FEBB02;
+    color: #113C73;
+    padding: 0.5rem 4rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.botoncarrousel {
+    width: 75%;
+}
+
+/* -------------------------------ADMIN NOVEDADES */
+
+.center {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+table {
+    font-size: 0.9rem;
+}
+
+table > thead {
+    border-bottom: solid 1px black;
+}
+
+
+/* -------------------------------TITULOS */
+
+.titulo-servicios {
+    font-size: 8rem;
+    color: #F1C40F; 
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2); 
+    font-weight: bold; 
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    height: 40%;
+}
+
+.titulo-servicios span {
+    color: #ffffff;
+    top: 0; 
+    left: 15%; 
+}
+
+.servicios-section {
+    background-image: url('../img/salas_vip/fondo-servicios.jpg'); 
+    background-size: cover; 
+    background-position: bottom; 
+    padding: 50px 0; 
+    position: relative; 
+}
+
+.servicios-section::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.linea-amarilla {
+    height: 30px; 
+    background-color: #F1C40F; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1;
+}
