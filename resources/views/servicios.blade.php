@@ -25,7 +25,7 @@
                         <p>Tarifa acceso: <strong>USD {{ $servicio->tarifa_acceso }}</strong></p>
                         <p>Tarifa socios: <strong>USD {{ $servicio->tarifa_socios }}</strong></p>
                         <p><strong>Condiciones:</strong> {{ $servicio->condiciones }}</p>
-                        <a href="#" class="confirm-link btn btn-primary" data-route="<?= url('confirmar-reserva') ?>" data-reserva-id="{{ $servicio->servicios_id }}" data-reserva-titulo="{{ $servicio->nombre }}">Generar reserva para Servicio 1</a>
+                        <a href="#" class="confirm-link btn boton" data-route="<?= url('confirmar-reserva') ?>" data-reserva-id="{{ $servicio->servicios_id }}" data-reserva-titulo="{{ $servicio->nombre }}">Reservar sala</a>
                     </div>
                 </div>
             </div>
