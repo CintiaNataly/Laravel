@@ -32,8 +32,7 @@
                                 <footer class="blockquote-footer">
                                     <cite title="Source Title">Fecha de publicación: {{ now()->format('d-m-Y') }}</cite>
                                 </footer>
-                                <p>{{ $novedad->info_abreviada }}</p>
-                                <a href="{{ route('novedades.show', ['id' => $novedad->novedades_id]) }}" class="btn boton">Leer más</a>
+                                <p>{{ $novedad->info_abreviada }}<a href="{{ route('novedades.show', ['id' => $novedad->novedades_id]) }}" class="btn "><span class="leer-mas">...Leer más</span></a></p>
                             </blockquote>
                         </div>
                     </div>

@@ -13,13 +13,13 @@
 
             @foreach($servicios as $servicio)
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card tarjeta">
                     @if($servicio->portada && Storage::exists($servicio->portada))
                     <img src="{{ Storage::url($servicio->portada) }}" alt="{{ $servicio->descripcion_portada }}" class="img-fluid m-auto">
                     @else
                     <img src="{{ asset('storage/imagenes/' . 'no-imagen.jpg') }}" alt="No hay imagen" class="img-fluid m-auto">
                     @endif
-                    <div class="card-body">
+                    <div class="card-body tarjeta-body">
                         <h3 class="card-title">{{ $servicio->nombre }}</h3>
                         <p class="card-text">{{ $servicio->descripcion }}</p>
                         <p>Tarifa acceso: <strong>USD {{ $servicio->tarifa_acceso }}</strong></p>
