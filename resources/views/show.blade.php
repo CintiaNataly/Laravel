@@ -33,7 +33,7 @@
                         <div>{{ $novedad->descripcion }}</div>
                     </blockquote>
                 </div>
-                <a href="{{ route('novedades') }}" class="btn boton">Volver a novedades</a>
+                <a href="{{ route('novedades') }}" class="btn boton mt-5">Volver a novedades</a>
             </div>
         </div>
     </div>

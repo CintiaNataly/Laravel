@@ -8,7 +8,7 @@
 
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h2 class="center text-start mb-2">Administrar Servicios</h2>
-            <a href="{{ route('servicios.crear') }}" class="btn boton mb-3 mt-3 ms-3 w-50">Agregar un Servicios</a>
+            <a href="{{ route('servicios.crear') }}" class="btn boton mb-3 mt-3 ms-3">Agregar un Servicios</a>
         </div>
 
         <p>*Los precios estan en dolares</p>

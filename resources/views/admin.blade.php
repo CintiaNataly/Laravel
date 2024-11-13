@@ -17,13 +17,13 @@
 
         <div class="row">
             <div class="col">
-                <a href="{{ route('novedades.admin') }}" class="btn boton mb-3 mt-3 fs-5">Administrar Novedades</a>
+                <a href="{{ route('novedades.admin') }}" class="btn boton mb-3 mt-3 fs-5 w-100">Administrar Novedades</a>
             </div>
             <div class="col">
-                <a href="{{ route('servicios.admin') }}" class="btn boton mb-3 mt-3 fs-5">Administrar Servicios</a>
+                <a href="{{ route('servicios.admin') }}" class="btn boton mb-3 mt-3 fs-5 w-100">Administrar Servicios</a>
             </div>
             <div class="col">
-                <a href="{{ route('usuarios.admin') }}" class="btn boton mb-3 mt-3 fs-5">Usuarios Administrador</a>
+                <a href="{{ route('usuarios.admin') }}" class="btn boton mb-3 mt-3 fs-5 w-100">Usuarios Administrador</a>
             </div>
         </div>
 

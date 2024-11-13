@@ -2,7 +2,7 @@
     <x-slot:title>Inicio de sesión</x-slot:title>
 
     <div class="container d-flex justify-content-center p-3">
-        <div class="card shadow" style="max-width: 1000px; width: 100%;">
+        <div class="card shadow mt-5" style="max-width: 880px; width: 100%;">
             <div class="card-body">
                 <h1 class="mb-4 text-center">Iniciar Sesión</h1>
 
@@ -24,7 +24,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Enviar</button>
                 </form>
-                <a href="{{ route('usuarios.registrar') }}" class="btn boton w-25 fs-6 mt-5 mx-auto d-block"> Registrarme </a>
+                <a href="{{ route('usuarios.registrar') }}" class="btn boton w-50 fs-6 mt-5 mx-auto d-block"> Registrarme </a>
             </div>
         </div>
     </div>

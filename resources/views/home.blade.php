@@ -44,7 +44,7 @@
                 <h2 class="frase mt-5 p-5 text-center">Volar debería ser una experiencia emocionante<br> y sin estrés</h2>
                 <p class="p-3 fs-4 m-3"><span class="frase">AeroAsist</span> es una herramienta pensada para todas las personas que transitan por los aeropuertos ya que más del 8% de los pasajeros pierden su vuelo<br> al año.</p>
                 <a class="nav-link" href="<?= route('servicios') ?>">
-                    <button class="btn botoncarrousel mx-auto d-block">¡Conocé nuestros planes!</button>
+                    <button class="btn botoncarrousel w-50 mx-auto d-block">¡Conocé nuestros planes!</button>
                 </a>
             </div>
         </div>

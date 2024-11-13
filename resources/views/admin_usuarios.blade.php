@@ -8,7 +8,7 @@
 
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h2 class="center text-start mb-2">Usuarios Administrador</h2>
-            <a href="{{ route('usuarios.crear') }}" class="btn boton mb-3 mt-3 ms-3 w-50">Agregar un Usuarios Administrador</a>
+            <a href="{{ route('usuarios.crear') }}" class="btn boton mb-3 mt-3 ms-3">Agregar un Usuarios Administrador</a>
         </div>
 
         <table class="table table-striped">
